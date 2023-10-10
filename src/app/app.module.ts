@@ -11,6 +11,10 @@ import { IncrementadorComponent } from './integracion/incrementador/incrementado
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { RUTAS } from './avanzado/rutas/app.routes';
+import { NavbarComponent } from './avanzado/navbar/navbar.component';
+import { RouterMedicoComponent } from './avanzado/router-medico/router-medico.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     MedicosComponent,
     MedicoComponent,
     HospitalComponent,
-    IncrementadorComponent
+    IncrementadorComponent,
+    NavbarComponent,
+    RouterMedicoComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    RouterModule.forRoot(RUTAS)
   ],
   providers: [
     MedicoService
